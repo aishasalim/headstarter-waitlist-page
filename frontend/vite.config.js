@@ -7,6 +7,7 @@ import path from 'path';
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 export default defineConfig({
+  base: './', // This ensures all paths are relative to the root
   plugins: [react()],
   define: {
     'process.env': process.env,
@@ -36,3 +37,4 @@ export default defineConfig({
     },
   },
 });
+
