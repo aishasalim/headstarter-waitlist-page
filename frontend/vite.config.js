@@ -7,7 +7,7 @@ import path from 'path';
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 export default defineConfig({
-  base: './', // This ensures all paths are relative to the root
+  base: './',
   plugins: [react()],
   define: {
     'process.env': process.env,
@@ -29,6 +29,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      input: 'index.html', // Ensure Vite uses index.html as the input
       output: {
         entryFileNames: 'assets/[name].js',
         chunkFileNames: 'assets/[name].js',
@@ -37,4 +38,3 @@ export default defineConfig({
     },
   },
 });
-
