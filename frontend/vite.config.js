@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import dotenv from 'dotenv';
 import path from 'path';
 
-// load .env file from parent directory
+// Load .env file from parent directory
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 export default defineConfig({
