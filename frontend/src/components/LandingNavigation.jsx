@@ -57,8 +57,8 @@ const LandingNavigation = () => {
     },
     {
       id: "4",
-      title: "Sign in",
-      url: "/signin",
+      title: "Join waitlist",
+      url: "#hero",
       onlyMobile: true,
     },
   ];
@@ -111,8 +111,8 @@ const LandingNavigation = () => {
           </nav>
 
           {/* Sign in button, visible only on large screens */}
-          <Button outlined className="hidden lg:flex" href="signin">
-            Sign in
+          <Button outlined className="hidden lg:flex" href="#hero">
+            Join waitlist
           </Button>
 
           {/* Menu SVG for toggling navigation on smaller screens */}

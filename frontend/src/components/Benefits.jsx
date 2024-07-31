@@ -109,10 +109,10 @@ const Benefits = () => {
                                     {<item.iconUrl stroke="#15803d" />}
 
                                     <a
-                                        href="signin"
+                                        href="#hero"
                                         className="ml-auto z-20 font-code text-xs font-bold text-green-700 uppercase tracking-wider flex items-center group"
                                     >
-                                        Explore more
+                                        Join waitlist
                                         <span className="transition-transform transform group-hover:translate-x-1 ml-1">
                                             <Arrow />
                                         </span>

@@ -2,10 +2,14 @@ import curve from "../assets/curve.png";
 import calendar from "../assets/calendar-hero.png";
 import Button from "./Button"; 
 import { ScrollParallax } from "react-just-parallax";
-import { useRef } from "react";
 import Notification from "./Notification";
 import { BackgroundCircles } from "../assets/design/Hero";
 import {CircleHelp} from "lucide-react";
+
+import React, { useRef, useState } from "react";
+import { collection, addDoc} from 'firebase/firestore';
+import { db } from './firebase.js';
+
 
 import avatar1 from "../assets/notification/image-2.png";
 import avatar2 from "../assets/notification/image-3.png";
@@ -19,9 +23,44 @@ import avatar3 from "../assets/notification/image-4.png";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
+  const [newItem, setNewItem] = useState({ email: ''});
+  const [showPopup, setShowPopup] = useState(false);
+
+  
+  const addEmail = async (e) => {
+    e.preventDefault();
+    if (newItem.email !== '') {
+      try {
+        await addDoc(collection(db, 'emails'), {
+          email: newItem.email.trim(),
+        });
+        setNewItem({ email: '' });
+        setShowPopup(true); // Show popup
+        setTimeout(() => setShowPopup(false), 3000); // Hide popup after 3 seconds
+      } catch (error) {
+        console.error("Error adding document: ", error);
+      }
+    } 
+  };
+  
 
   return (
-    <div className="container relative" ref={parallaxRef}>
+    <div id="hero" className="container relative" ref={parallaxRef}>
+
+       {/* POP UP */}
+        {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+            <div className="bg-n-1 animate-fadeIn mx-5 min-h-[15rem] p-[2.4rem] rounded rounded-2xl">
+              <p className="font-code text-2xl font-bold text-green-700 uppercase tracking-wider flex items-center group">
+                Thank you for joining! We'll keep you updated.
+              </p>
+              <Button onClick={() => setShowPopup(false)} className="my-10">
+                Close
+              </Button>
+            </div>
+          </div>
+        )}
+
       {/* Logo, hero headline and call to action button */}
       <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[10rem]">
         <h1 className="h1 mb-6">
@@ -42,9 +81,21 @@ const Hero = () => {
           Effortless scheduling and collaboration with shared calendars. 
           Optimize your time and productivity.
         </p>
-        <Button href="/signin" white>
-          Get started
-        </Button>
+
+        {/* Form for email waitlist */}
+        <form onSubmit={addEmail} className="flex px-5 flex-col sm:flex-row items-center justify-center relative z-20">
+          <input
+            className='w-full sm:w-auto mb-4 sm:mb-0 sm:mr-5 rounded-md p-2 border z-20'
+            type='email'
+            placeholder='Enter your email'
+            value={newItem.email}
+            onChange={(e) => setNewItem({ ...newItem, email: e.target.value })}
+            required
+          />
+          <Button type='submit' white className="z-20">
+            Join waitlist
+          </Button>
+        </form>
       </div>
 
       {/* Image with notifications and parallax effect */}

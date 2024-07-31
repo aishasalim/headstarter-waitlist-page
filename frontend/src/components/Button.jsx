@@ -21,7 +21,6 @@ const Button = ({ className, href, onClick, children, outlined, focusRingColor =
 
   return (
     <button
-      type="button"
       className={commonClasses}
       onClick={onClick}
     >
