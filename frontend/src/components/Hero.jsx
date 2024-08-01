@@ -85,7 +85,7 @@ const Hero = () => {
         {/* Form for email waitlist */}
         <form onSubmit={addEmail} className="flex px-5 flex-col sm:flex-row items-center justify-center relative z-20">
           <input
-            className='w-full sm:w-auto mb-4 sm:mb-0 sm:mr-5 rounded-md p-2 border z-20'
+            className='w-full sm:w-[250px] md:w-[300px] lg:w-[350px] mb-4 sm:mb-0 sm:mr-5 rounded-md p-3 border z-20'
             type='email'
             placeholder='Enter your email'
             value={newItem.email}

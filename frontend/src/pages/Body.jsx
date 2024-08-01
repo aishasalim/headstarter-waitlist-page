@@ -4,7 +4,6 @@ import Services from '../components/Services';
 
 import LandingNavigation from '../components/LandingNavigation';
 import Action from '../components/Action';
-import Roadmap from '../components/Roadmap';
 import Footer from '../components/Footer';
 
 
@@ -17,7 +16,6 @@ function Body() {
     <Benefits />
     <Services />
     <Action />
-    <Roadmap />
     <Footer />
     </div>
 

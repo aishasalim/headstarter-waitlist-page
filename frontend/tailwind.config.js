@@ -30,7 +30,7 @@ export default {
       },
       colors: {
         color: {
-          1: "#AC6AFF",
+          1: "#f9f5e9",
           2: "#FFC876",
           3: "#FF776F",
           4: "#7ADB78", // green

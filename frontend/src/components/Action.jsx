@@ -50,7 +50,7 @@ const Action = () => {
       return (
         <motion.div
           id="action"
-          className="relative mb-10 pb-15 mt-15 lg:py-10 xl:py-15 lg:py-20 xl:py-30 overflow-hidden"
+          className="relative mb-20 pb-15 mt-15 lg:py-10 xl:py-15 lg:py-20 xl:py-30 overflow-hidden"
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

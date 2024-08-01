@@ -52,11 +52,6 @@ const LandingNavigation = () => {
     },
     {
       id: "3",
-      title: "Roadmap",
-      url: "#roadmap",
-    },
-    {
-      id: "4",
       title: "Join waitlist",
       url: "#hero",
       onlyMobile: true,
