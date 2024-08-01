@@ -13,9 +13,9 @@ function Body() {
     <LandingNavigation/>
     <div className='mt-[5em] pt-[5rem] lg:pt-[6em]'>
     <Hero/>
-    <Benefits />
     <Services />
     <Action />
+    {/* <Benefits /> */}
     <Footer />
     </div>
 

@@ -37,18 +37,18 @@ const LandingNavigation = () => {
   const navigation = [
     {
       id: "0",
-      title: "Features",
-      url: "#features",
+      title: "Home",
+      url: "#hero",
     },
     {
       id: "1",
-      title: "How to use",
-      url: "#how-to-use",
+      title: "Highlights",
+      url: "#highlights",
     },
     {
       id: "2",
-      title: "In Action",
-      url: "#action",
+      title: "Features",
+      url: "#features",
     },
     {
       id: "3",
@@ -56,6 +56,11 @@ const LandingNavigation = () => {
       url: "#hero",
       onlyMobile: true,
     },
+    // {
+    //   id: "4",
+    //   title: "Features",
+    //   url: "#features",
+    // },
   ];
 
   return (

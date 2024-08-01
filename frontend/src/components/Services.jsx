@@ -1,6 +1,8 @@
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
+import Tagline from "./Tagline";
+import Typing from 'react-typing-effect';
 
 import services1 from "../assets/services_1.png";
 import services2 from "../assets/services_2.png";
@@ -32,12 +34,43 @@ const Services = () => {
         visible: { opacity: 1, y: 0 }
     };
 
+    const slideUpEffect = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.2,
+                duration: 0.6,
+                ease: 'easeInOut',
+            },
+        },
+    };
+
     return (
-        <div id="how-to-use" className="relative py-15 mt-5 lg:py-2 xl:py-10 lg:py-25 xl:py-30 overflow-hidden">
+        <div id="highlights" className="relative py-15 mt-[5em] lg:py-2 xl:py-10 lg:py-25 xl:py-30 overflow-hidden">
             <div className="container">
                 {/* Header */}
-                <div className="md:max-w-md lg:max-w-2xl max-w-[50rem] mx-auto mb-12 lg:mb-20 md:text-center">
-                    <h2 className="h2">Good live with great schedules</h2>
+                <div ref={ref} className="md:max-w-md lg:max-w-2xl max-w-[50rem] mx-auto mb-12 lg:mb-20 md:text-center">
+                <motion.div
+                    ref={ref}
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    variants={slideUpEffect}
+                >
+                    <Tagline className="mb-4 md:justify-center">What we're working on</Tagline>
+                    {inView && (
+                        <Typing
+                            text={["Plan Smarter, Not Harder with TimeMesh"]}
+                            className="h2"
+                            speed={100}
+                            eraseSpeed={50}
+                            typingDelay={290}
+                            cursor=""
+                            eraseDelay={1000000} // Large value to prevent erasing and retyping
+                        />
+                    )}
+                </motion.div>
                 </div>
 
                 {/* Main content with motion effects */}

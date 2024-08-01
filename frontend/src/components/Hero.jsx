@@ -109,15 +109,16 @@ const Hero = () => {
             />
           </div>
 
-          {/* Notification on the middle right */}
-          <div className="absolute backdrop-blur left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2 flex items-center h-auto px-6 py-4 bg-white rounded-[1.7rem] shadow-lg text-base" style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)' }}>
+           {/* Notification on the middle right  */}
+           <div className="hidden lg:flex absolute backdrop-blur left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2 items-center h-auto px-6 py-4 bg-white rounded-[1.7rem] shadow-lg text-base" style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)' }}>
             <CircleHelp className="w-6 h-6 mr-4" />
             <div className="flex-1">
               Where do I put my study group meeting?
             </div>
           </div>
 
-            {/* message on top of picture - middle right */}
+
+          {/* message on top of picture - middle right  */}
             <ScrollParallax isAbsolutelyPositioned>
               <div className="hidden lg:block absolute right-[-3rem] top-1/2 transform -translate-y-1/2 md:w-[20rem] z-10">
                 <Notification
@@ -130,7 +131,7 @@ const Hero = () => {
               </div>
             </ScrollParallax>
 
-            {/* Notification on top of the picture - top left */}
+           {/* Notification on top of the picture - top left  */}
             <ScrollParallax isAbsolutelyPositioned>
               <div className="hidden lg:block absolute left-[-3rem] top-[17rem] transform -translate-y-1/2 md:w-[20rem] z-10">
                 <Notification

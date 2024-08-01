@@ -9,7 +9,7 @@ const Footer = () => {
         </p>
 
         <h4 className="flex gap-5 flex-wrap">
-                HeadStarter Group Team Project
+                Team Project - Jason, Ester, Weijie, Aisha
         </h4>
     </div>
 </div>
