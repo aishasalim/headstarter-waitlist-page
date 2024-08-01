@@ -1,5 +1,5 @@
 import Body from './pages/Body.jsx';
-import Team from './pages/Team.jsx';
+
 
 
 import { useRoutes, BrowserRouter as Router } from 'react-router-dom'
@@ -12,10 +12,6 @@ function App() {
       {
         path: "/",
         element:<Body/>
-      },
-      {
-        path: "/team",
-        element:<Team/>
       }
     ]);
 

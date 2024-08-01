@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 
 const Action = () => {
     const actionData = {
-        title: "[PROJECTNAME] in Action",
-        description: "With [PROJECTNAME], you have everything you need to keep life organized.",
+        title: "TimeMesh in Action",
+        description: "With TimeMesh, you have everything you need to keep life organized.",
         sections: [
           {
             title: "Unified Calendars, Simplified Lives",

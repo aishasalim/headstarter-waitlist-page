@@ -10,7 +10,6 @@ const Benefits = () => {
           id: "0",
           title: "Seamless Scheduling",
           text: "Effortlessly coordinate and schedule team meetings and personal appointments, ensuring that everyone's availability is taken into account.",
-          backgroundUrl: "assets/benefits/calendar-1.svg",
           iconUrl: CalendarCheck,
           imageUrl: "#",
         },
@@ -18,7 +17,6 @@ const Benefits = () => {
           id: "1",
           title: "Real-Time Updates",
           text: "Receive instant updates and notifications about changes in schedules, helping you stay on top of your commitments and avoid conflicts.",
-          backgroundUrl: "assets/benefits/calendar-2.svg",
           iconUrl: BellPlus,
           imageUrl: "#",
           light: true,
@@ -27,7 +25,6 @@ const Benefits = () => {
           id: "2",
           title: "Enhanced Productivity",
           text: "Improve productivity by having a clear and organized overview of your work and personal life, helping you manage your time more effectively.",
-          backgroundUrl: "assets/benefits/calendar-3.svg",
           iconUrl: ListChecks,
           imageUrl: "#",
         },
@@ -35,7 +32,6 @@ const Benefits = () => {
           id: "3",
           title: "Collaborative Planning",
           text: "Collaborate with your team to plan projects and meetings, ensuring everyone is on the same page and working towards common goals.",
-          backgroundUrl: "assets/benefits/calendar-4.svg",
           iconUrl: Users,
           imageUrl: "#",
           light: true,
@@ -44,7 +40,6 @@ const Benefits = () => {
           id: "4",
           title: "Universal Access",
           text: "Access your calendar from any device, anywhere, ensuring you always have your schedule at your fingertips.",
-          backgroundUrl: "assets/benefits/calendar-5.svg",
           iconUrl: Earth,
           imageUrl: "#",
         },
@@ -78,7 +73,7 @@ const Benefits = () => {
                 >
                     {inView && (
                         <Typing
-                            text={["Plan Smarter, Not Harder with [Project Name]"]}
+                            text={["Plan Smarter, Not Harder with TimeMesh"]}
                             className="h2"
                             speed={100}
                             eraseSpeed={50}
@@ -98,9 +93,6 @@ const Benefits = () => {
                             animate={inView ? "visible" : "hidden"}
                             variants={slideUpEffect}
                             className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] border border-green-700 rounded-2xl overflow-hidden"
-                            style={{
-                                backgroundImage: `url(${item.backgroundUrl})`,
-                            }}
                         >
                             <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] bg-white rounded-2xl">
                                 <h5 className="h5 mb-5">{item.title}</h5>

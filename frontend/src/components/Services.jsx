@@ -111,7 +111,7 @@ const Services = () => {
                             <div className="p-8 lg:p-15">
                                 <h4 className="h4 mb-4">Stay in touch with everyone</h4>
                                 <p className="body-2 mb-[3rem] text-n-4">
-                                    [PROJECTNAME] Calendar is a platform where anyone can easily share event information in calendar format.
+                                    TimeMesh Calendar is a platform where anyone can easily share event information in calendar format.
                                     Share important information you don't want others to miss!
                                 </p>
                             </div>
@@ -127,7 +127,7 @@ const Services = () => {
                         >
                             {/* Text content section */}
                             <div className="py-12 px-4 xl:px-8">
-                                <h4 className="h4 mb-4">Infinite ways to use [PROJECTNAME]</h4>
+                                <h4 className="h4 mb-4">Infinite ways to use TimeMesh</h4>
                                 <p className="body-2 mb-[2rem] text-n-4">
                                     Find the perfect way to use the calendar for you!
                                 </p>

@@ -62,7 +62,7 @@ const Hero = () => {
         )}
 
       {/* Logo, hero headline and call to action button */}
-      <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[10rem]">
+      <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.5rem] md:mb-15 lg:mb-[6rem]">
         <h1 className="h1 mb-6">
           Unified Calendars, &nbsp;
           <span className="relative inline-block">

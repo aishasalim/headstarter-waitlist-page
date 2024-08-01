@@ -78,7 +78,7 @@ const LandingNavigation = () => {
           <a className="flex items-center w-[12rem] xl:mr-8" href="/">
             <img src={iconsite} width={60} alt="turtle icon" className="mr-2" />
             <span className="font-bold font-grotest text-base md:text-lg lg:text-2xl">
-              HomePage
+              TimeMesh
             </span>
           </a>
 
