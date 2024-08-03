@@ -72,7 +72,7 @@ const LandingNavigation = () => {
         }`}
       >
         {/* Inner container for centering and padding */}
-        <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:pt-4">
+        <div  className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:pt-4">
           
           {/* HomePage link - site icon and text span */}
           <a className="flex items-center w-[12rem] xl:mr-8" href="/">
@@ -88,15 +88,15 @@ const LandingNavigation = () => {
               openNavigation ? "flex" : "hidden"
             } fixed top-[4.8rem] left-0 right-0 bottom-0 bg-white lg:static lg:flex lg:mx-auto lg:bg-transparent`}
           >
-            <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+            <div className="relative py-4 z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
               {navigation.map((item) => (
                 <a
                   key={item.id}
                   href={item.url}
                   onClick={handleClick}
-                  className={`block relative font-code text-2xl uppercase text-black transition-colors ${
+                  className={`block relative font-code text-md lg:text-sm uppercase text-black transition-colors ${
                     item.onlyMobile ? "lg:hidden" : ""
-                  } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                  } px-6 py-6 md:py-8 lg:py-2.5 lg:px-4 lg:mx-1.5 ${
                     item.url === pathname.hash
                       ? "z-2 lg:text-black"
                       : "lg:text-black/50"
