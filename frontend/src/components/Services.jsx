@@ -1,13 +1,13 @@
-import { useInView } from 'react-intersection-observer';
-import { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
-import Tagline from "./Tagline";
+import { useEffect, useState } from "react";
+import { useInView } from 'react-intersection-observer';
 import Typing from 'react-typing-effect';
+import Tagline from "./Tagline";
 
+import { CircleCheck } from "lucide-react";
 import services1 from "../assets/services_1.png";
 import services2 from "../assets/services_2.png";
 import services3 from "../assets/services_3.png";
-import { CircleCheck } from "lucide-react";
 
 const Services = () => {
     // Use the useInView hook to track the visibility of the component
@@ -61,7 +61,7 @@ const Services = () => {
                     <Tagline className="mb-4 md:justify-center">What we're working on</Tagline>
                     {inView && (
                         <Typing
-                            text={["Plan Smarter, Not Harder with TimeMesh"]}
+                            text={["Plan Smarter, Not Harder"]}
                             className="h2"
                             speed={100}
                             eraseSpeed={50}
