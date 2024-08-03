@@ -1,40 +1,42 @@
 import React, { useState } from 'react';
-import calendarImage from "../assets/calendar-hero.png";
-import {ChevronDown, ChevronRight} from "lucide-react";
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
+// import png
+import ConceptCalAddEvent from "../assets/ConceptCalAddEvent.png";
+import ConceptCalEventDetails from "../assets/ConceptCalEventDetails.png";
+import ConceptCalFriendsDetails from "../assets/ConceptCalFriendsDetails.png";
+import ConceptCalUpdates from "../assets/ConceptCalUpdates.png";
+
+// import lucide icons
+import {ChevronDown, ChevronRight} from "lucide-react";
+
 const Action = () => {
-    const actionData = {
-        title: "TimeMesh in Action",
-        description: "With TimeMesh, you have everything you need to keep life organized.",
-        sections: [
-          {
-            title: "Unified Calendars, Simplified Lives",
-            text: "Effortlessly schedule and collaborate with shared calendars. Optimize your time and productivity with our unified platform.",
-            imageSrc: calendarImage
-          },
-          {
-            title: "Seamless Scheduling",
-            text: "Effortlessly coordinate and schedule team meetings and personal appointments, ensuring that everyone's availability is taken into account.",
-            imageSrc: calendarImage
-          },
-          {
-            title: "Real-Time Updates",
-            text: "Receive instant updates and notifications about changes in schedules, helping you stay on top of your commitments and avoid conflicts.",
-            imageSrc: calendarImage
-          },
-          {
-            title: "Enhanced Productivity",
-            text: "Improve productivity by having a clear and organized overview of your work and personal life, helping you manage your time more effectively.",
-            imageSrc: calendarImage
-          },
-          {
-            title: "Collaborative Planning",
-            text: "Collaborate with your team to plan projects and meetings, ensuring everyone is on the same page and working towards common goals.",
-            imageSrc: calendarImage
-          }
-        ]};
+  const actionData = {
+    title: "TimeMesh in Action",
+    description: "With TimeMesh, you have everything you need to keep life organized.",
+    sections: [
+      {
+        title: "Unified Calendars, Simplified Lives",
+        text: "Effortlessly schedule and collaborate with shared calendars. Optimize your time and productivity with our unified platform.",
+        imageSrc: ConceptCalAddEvent
+      },
+      {
+        title: "Seamless Scheduling",
+        text: "Effortlessly coordinate and schedule team meetings and personal appointments, ensuring that everyone's availability is taken into account.",
+        imageSrc: ConceptCalEventDetails
+      },
+      {
+        title: "Collaborative Planning",
+        text: "Collaborate with your team to plan projects and meetings, ensuring everyone is on the same page and working towards common goals.",
+        imageSrc: ConceptCalFriendsDetails
+      },
+      {
+        title: "Real-Time Updates",
+        text: "Receive instant updates and notifications about changes in schedules, helping you stay on top of your commitments and avoid conflicts.",
+        imageSrc: ConceptCalUpdates
+      }
+    ]};
 
       const [selectedSection, setSelectedSection] = useState(actionData.sections[0]);
       const [expandedSection, setExpandedSection] = useState(actionData.sections[0].title);
