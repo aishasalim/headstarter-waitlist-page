@@ -9,7 +9,7 @@ const Footer = () => {
         </p>
 
         <h4 className="flex flex-wrap">
-            Team Project - 
+            Dev Team - 
 
             <a className="text-green-700 underline ml-2" target="_blank" href="https://www.linkedin.com/in/aisha-salimgereyeva/">Aisha</a>
             <span className="mr-2">,</span> 
