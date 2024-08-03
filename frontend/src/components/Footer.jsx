@@ -13,7 +13,7 @@ const Footer = () => {
 
             <a className="text-green-700 underline ml-2" target="_blank" href="https://www.linkedin.com/in/aisha-salimgereyeva/">Aisha</a>
             <span className="mr-2">,</span> 
-            <a className="text-green-700 underline " target="_blank" href="https://www.linkedin.com/in/esterlin-jerez-paulino/">Ester</a>
+            <a className="text-green-700 underline " target="_blank" href="https://www.linkedin.com/in/esterlin-jerez-paulino/">Esterlin</a>
             <span className="mr-2">,</span> 
             <a className="text-green-700 underline " target="_blank" href="https://www.linkedin.com/in/jasonhuangdev/">Jason</a>
             <span className="mr-2">,</span> 
