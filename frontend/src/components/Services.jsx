@@ -23,7 +23,7 @@ const Services = () => {
 
     // List of services to be displayed in the first card
     const services = [
-        "See schedules of people in your calendar",
+        "See other people's schedules in your calendar",
         "Find a common time for meetings",
         "Add and edit your shared schedules",
     ];
@@ -103,7 +103,7 @@ const Services = () => {
                         <div className="relative z-1 w-full sm:w-2/5 p-8 bg-white rounded-b-3xl sm:rounded-r-3xl sm:rounded-b-none">
                             <h4 className="h4 my-5">Quick planning</h4>
                             <p className="body-2 mb-[3rem] text-n-4">
-                                Import your your friends and workmates calendart to be ahead everywhere
+                                Import your your friends' and workmates' calendars to be ahead everywhere
                             </p>
                             <ul className="body-2">
                                 {services.map((item, index) => (
