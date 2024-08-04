@@ -50,15 +50,15 @@ const Hero = () => {
        {/* POP UP */}
         {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-            <div className="bg-n-1 animate-fadeIn mx-5 min-h-[15rem] p-[2.4rem] rounded rounded-2xl">
-              <p className="font-code text-2xl font-bold text-green-700 uppercase tracking-wider flex items-center group">
-                Thank you for joining! We'll keep you updated.
-              </p>
-              <Button onClick={() => setShowPopup(false)} className="my-10">
-                Close
-              </Button>
-            </div>
-          </div>
+        <div className="bg-n-1 animate-fadeIn mx-5 min-h-[15rem] p-[2.4rem] rounded rounded-2xl flex flex-col items-center">
+          <p className="font-code text-2xl font-bold text-green-700 uppercase tracking-wider flex items-center group">
+            Thank you for joining! We'll keep you updated.
+          </p>
+          <Button onClick={() => setShowPopup(false)} className=" px-10 my-10">
+            Close
+          </Button>
+        </div>
+      </div>
         )}
 
       {/* Logo, hero headline and call to action button */}
